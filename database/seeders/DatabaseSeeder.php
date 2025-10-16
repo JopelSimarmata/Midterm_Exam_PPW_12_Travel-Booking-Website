@@ -17,6 +17,33 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        \App\Models\Destinasi::insert([
+            [
+                'nama' => 'Silangit - Jakarta',
+                'harga' => 1000000,
+                'maskapai' => 'Air Asia',
+
+            ],
+            [
+                'nama' => 'Silangit-Medan',
+                'harga' => 500000,
+                'maskapai' => 'Citilink',
+
+            ],
+            [
+                'nama' => 'Silangit-Batam',
+                'harga' => 300000,
+                'maskapai' => 'Garuda',
+
+            ],
+            [
+                'nama' => 'Silangit-Bali',
+                'harga' => 3000000,
+                'maskapai' => 'Super Air Jet',
+
+            ],
+        ]);
+
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',

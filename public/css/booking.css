@@ -1,0 +1,324 @@
+/* Modern CSS dengan Gradient & Animasi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: fadeInDown 0.8s ease;
+}
+
+/* Container untuk 2 kolom di desktop */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Grid Layout - 2 kolom di desktop */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* 2 kolom di desktop (min-width: 768px) */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+/* Modern Card dengan glassmorphism effect */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin-bottom: 25px;
+    color: #667eea;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* Modern Alert */
+.alert {
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    animation: slideInRight 0.5s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert.success {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #155724;
+    border: none;
+    box-shadow: 0 4px 15px rgba(132, 250, 176, 0.4);
+}
+
+.alert.success::before {
+    content: '✓';
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Modern Form styling */
+form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form input, 
+form select {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+form input:hover,
+form select:hover {
+    border-color: #cbd5e0;
+}
+
+/* Gradient Button */
+form button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+form button:active {
+    transform: translateY(-1px);
+}
+
+/* Modern Total Harga Box */
+#totalHarga {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 15px;
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+    animation: pulse 2s infinite;
+}
+
+/* Modern Table styling */
+.table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+
+table th, 
+table td {
+    padding: 15px;
+    text-align: left;
+}
+
+table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+table th:first-child {
+    border-top-left-radius: 12px;
+}
+
+table th:last-child {
+    border-top-right-radius: 12px;
+}
+
+table tr {
+    background: white;
+    transition: all 0.3s ease;
+}
+
+table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+table tr:hover {
+    background: #edf2f7;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+table td {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Modern Link styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Mobile: 1 kolom (max-width: 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    
+    .card {
+        padding: 25px 20px;
+    }
+    
+    .card h2 {
+        font-size: 1.4em;
+    }
+    
+    table th, 
+    table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    #totalHarga {
+        font-size: 18px;
+        padding: 15px;
+    }
+    
+    form button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
